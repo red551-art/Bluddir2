@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLUGGLE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- BLUGGLE Search Page -->
+    <div class="search-page" id="searchPage">
+        <div class="logo">
+            <span>B</span><span>L</span><span>U</span><span>G</span><span>G</span><span>L</span><span>E</span>
+        </div>
+        <div class="search-box">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" id="searchInput" placeholder="Введите запрос..." autofocus>
+        </div>
+        <div class="search-buttons">
+            <button class="btn" onclick="performSearch()">Поиск в BLUGGLE</button>
+            <button class="btn" onclick="performSearch()">Мне повезёт!</button>
+        </div>
+    </div>
+
+    <!-- Search Results Page -->
+    <div class="results-page" id="resultsPage">
+        <div class="results-header">
+            <div class="results-logo" onclick="goToSearch()">
+                <span style="color: #4285f4">B</span><span style="color: #ea4335">L</span><span style="color: #fbbc05">U</span><span style="color: #4285f4">G</span><span style="color: #34a853">G</span><span style="color: #ea4335">L</span><span style="color: #4285f4">E</span>
+            </div>
+            <div class="results-search-box">
+                <input type="text" class="results-search-input" id="resultsSearchInput">
+            </div>
+            <button class="back-btn" onclick="goToSearch()">← Назад</button>
+        </div>
+        <div class="results-container">
+            <div class="stats">Примерно 1 результат (0.42 секунды)</div>
+            <div class="result-item" onclick="openBluddit()">
+                <div class="result-url">
+                    <div class="result-favicon">
+                        <img src="2.png" alt="Bluddit" onerror="this.style.display='none'; this.parentElement.textContent='👽'">
+                    </div>
+                    <span>bluddit.com › b › Hramses › comments</span>
+                </div>
+                <a class="result-title">На старом монументе находится засекреченная заброшенная военная база!</a>
+                <div class="result-description">
+                    <strong>b/Hramses</strong> • Опубликовано Wlendow • 5 часов назад<br>
+                    📍 Локация обнаружена • 🔴 Срочно • Проект REPLAY закрыт. Сущность из блока души и редстоуна создаёт искажённые образы жертв...
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bluddit Page -->
+    <div class="bluddit-page" id="bludditPage">
+        <header class="header">
+            <div class="logo-section">
+                <button class="back-btn-small" onclick="goToResults()">← Назад</button>
+                <div class="logo-bluddit">
+                    <img src="2.png" alt="Bluddit" onerror="this.style.display='none'">
+                </div>
+                <div class="logo-text">bluddit</div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Поиск в Bluddit">
+            </div>
+            <div class="user-menu">
+                <button class="btn-outline">Войти</button>
+                <button class="btn-primary">Регистрация</button>
+            </div>
+        </header>
+
+        <div class="container">
+            <main>
+                <article class="post">
+                    <div class="post-header">
+                        <span class="subreddit-link">🔵 b/Hramses</span>
+                        <span>•</span>
+                        <span>Опубликовано Wlendow</span>
+                        <span>•</span>
+                        <span>5 часов назад</span>
+                    </div>
+                    
+                    <h1 class="post-title">
+                        На старом монументе находится засекреченная заброшенная военная база!
+                    </h1>
+                    
+                    <div class="post-meta">
+                        📍 Локация обнаружена • 🔴 Срочно • 👁️ 12.5k просмотров
+                    </div>
+
+                    <div class="coordinates">
+                        <span>📍 Координаты:</span>
+                        <span class="coordinates-value">-7.549495879322532, 131.3820657731916</span>
+                    </div>
+
+                    <div class="warning-box">
+                        <h4>⚠️ ВНИМАНИЕ: ОПАСНЫЙ ОБЪЕКТ ⚠️</h4>
+                        <p style="color: #ff6b6b; font-weight: bold;">Проект закрыт. Объект представляет угрозу. Не приближаться!</p>
+                    </div>
+
+                    <div class="post-description">
+                        <h3>📋 ПРИЧИНА ЗАКРЫТИЯ ПРОЕКТА "REPLAY"</h3>
+                        <ul>
+                            <li><strong>Происхождение сущности:</strong> Экспериментальный гибрид, созданный из "Блока Души" и редстоуна. Объект обладал способностью материализовать прошлые образы жертвы.</li>
+                            <li><strong>Механика атаки:</strong> Сущность воспроизводила искаженные копии жертвы из её прошлого. Эти образы нападали на оригинал.</li>
+                            <li><strong>Цикл воспроизведения:</strong> При уничтожении одного образа, сущность находила новые воспоминания и создавала ещё больше копий.</li>
+                            <li><strong>Поведение после боя:</strong> Если жертва побеждала все образы, сущность отступала и ждала следующую жертву.</li>
+                            <li><strong>Статус:</strong> Объект опечатан. Доступ запрещён.</li>
+                        </ul>
+                        <div style="margin-top: 12px; padding-top: 12px; border-top: 1px solid #343536; font-style: italic; color: #818384; font-size: 13px;">
+                            <strong style="color: #d7dadc">🔒 Объект закрыт по приказу:</strong> Совместной оперативной группы "Феникс" при участии Министерства Обороны.
+                        </div>
+                    </div>
+
+                    <div class="post-images">
+                        <img src="1.png" alt="Фото 1" class="post-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23333%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EФото 1%3C/text%3E%3C/svg%3E'">
+                        <img src="5.png" alt="Фото 2" class="post-image" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22400%22 height=%22300%22%3E%3Crect fill=%22%23333%22 width=%22400%22 height=%22300%22/%3E%3Ctext fill=%22%23666%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dy=%22.3em%22%3EФото 2%3C/text%3E%3C/svg%3E'">
+                    </div>
+
+                    <div class="post-actions">
+                        <button class="action-btn">▲ 2.4k</button>
+                        <button class="action-btn">▼</button>
+                        <button class="action-btn">💬 247 комментариев</button>
+                        <button class="action-btn">↗️ Поделиться</button>
+                        <button class="action-btn">⭐ Сохранить</button>
+                    </div>
+                </article>
+
+                <section class="comments-section">
+                    <div class="comments-header">247 комментариев • Сортировать: <strong>Лучшие</strong></div>
+                    
+                    <!-- Comment 1 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar">Л</div>
+                            <span class="comment-author">лол</span>
+                            <span class="comment-time">• 4 часа назад</span>
+                        </div>
+                        <div class="comment-text">нет не правда</div>
+                    </div>
+
+                    <!-- Comment 2 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar">М</div>
+                            <span class="comment-author">мария</span>
+                            <span class="comment-time">• 3 часа назад</span>
+                        </div>
+                        <div class="comment-text">Жесть... Автор, ты серьёзно туда ходил? Это же самоубийство!</div>
+                    </div>
+
+                    <!-- Comment 3 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">R</div>
+                            <span class="comment-author">Redditore</span>
+                            <span class="comment-time">• 3 часа назад</span>
+                        </div>
+                        <div class="comment-text">Зачем ты вообще выложил координаты? Кто-то же пойдёт и погибнет!</div>
+                    </div>
+
+                    <!-- Comment 4 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">B</div>
+                            <span class="comment-author">Blu</span>
+                            <span class="comment-time">• 2 часа назад</span>
+                        </div>
+                        <div class="comment-text">да я там был там жутко</div>
+                        <div class="replies">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">G</div>
+                                    <span class="comment-author">Greal</span>
+                                    <span class="comment-time">• 1 час назад</span>
+                                </div>
+                                <div class="comment-text">И ты жив остался? Как?!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comment 5 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">A</div>
+                            <span class="comment-author">Alex_Urban</span>
+                            <span class="comment-time">• 4 часа назад</span>
+                        </div>
+                        <div class="comment-text">Я тоже видел это место! Но никогда бы не стал туда заходить. Слишком опасно.</div>
+                    </div>
+
+                    <!-- Comment 6 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">N</div>
+                            <span class="comment-author">NightHunter</span>
+                            <span class="comment-time">• 3 часа назад</span>
+                        </div>
+                        <div class="comment-text">Координаты проверил - это где-то в Тихом океане. Очень подозрительно 🤔</div>
+                    </div>
+
+                    <!-- Comment 7 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ffd5dc 0%, #ffd5dc 100%); color: #333;">G</div>
+                            <span class="comment-author">GhostSeeker</span>
+                            <span class="comment-time">• 2 часа назад</span>
+                        </div>
+                        <div class="comment-text">Кто-нибудь знает что там было раньше? Военная база или что?</div>
+                        <div class="replies">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="comment-avatar" style="background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); color: #333;">D</div>
+                                    <span class="comment-author">Dmitry_K</span>
+                                    <span class="comment-time">• 2 часа назад</span>
+                                </div>
+                                <div class="comment-text">По идее там должна быть старая японская база со времён ВМВ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comment 8 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); color: #333;">M</div>
+                            <span class="comment-author">MysteryLover</span>
+                            <span class="comment-time">• 5 часов назад</span>
+                        </div>
+                        <div class="comment-text">Выглядит реально жутко на фото. Но туда лучше не соваться, ребята.</div>
+                    </div>
+
+                    <!-- Comment 9 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ffcfcf 0%, #ffcfcf 100%); color: #333;">S</div>
+                            <span class="comment-author">Skeptic99</span>
+                            <span class="comment-time">• 1 час назад</span>
+                        </div>
+                        <div class="comment-text">Это фейк. Координаты ведут в океан. Автор несёт чушь.</div>
+                        <div class="replies">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="comment-avatar" style="background: linear-gradient(135deg, #c0aede 0%, #c0aede 100%);">W</div>
+                                    <span class="comment-author">Wlendow</span>
+                                    <span class="comment-time">• 45 минут назад</span>
+                                    <span style="background: #00d4ff; color: #030303; padding: 2px 6px; border-radius: 4px; font-size: 10px; margin-left: 8px;">OP</span>
+                                </div>
+                                <div class="comment-text">Я там лично был! Координаты примерные, но место реальное</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comment 10 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">U</div>
+                            <span class="comment-author">UrbanExplorer</span>
+                            <span class="comment-time">• 6 часов назад</span>
+                        </div>
+                        <div class="comment-text">Как сталкер со стажем - НЕ ИДИТЕ ТУДА. Есть места которые лучше не трогать.</div>
+                    </div>
+
+                    <!-- Comment 11 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #b6e3f4 0%, #b6e3f4 100%); color: #333;">P</div>
+                            <span class="comment-author">ParanormalFan</span>
+                            <span class="comment-time">• 3 часа назад</span>
+                        </div>
+                        <div class="comment-text">Там точно есть что-то паранормальное. Слышал истории о странных огнях ночью</div>
+                    </div>
+
+                    <!-- Comment 12 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">T</div>
+                            <span class="comment-author">TechGuy</span>
+                            <span class="comment-time">• 2 часа назад</span>
+                        </div>
+                        <div class="comment-text">"Блок души и редстоун"? Звучит как какая-то модификация для игры, а не реальный проект.</div>
+                    </div>
+
+                    <!-- Comment 13 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ffdfbf 0%, #ffdfbf 100%); color: #333;">D</div>
+                            <span class="comment-author">DarkWeb</span>
+                            <span class="comment-time">• 4 часа назад</span>
+                        </div>
+                        <div class="comment-text">Я нашёл эту базу на старых спутниковых снимках. Она исчезла с карт в 1998 году</div>
+                    </div>
+
+                    <!-- Comment 14 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);">T</div>
+                            <span class="comment-author">TruthSeeker</span>
+                            <span class="comment-time">• 5 часов назад</span>
+                        </div>
+                        <div class="comment-text">Кто-то был там недавно? Какие впечатления?</div>
+                    </div>
+
+                    <!-- Comment 15 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #c9e4de 0%, #c9e4de 100%); color: #333;">E</div>
+                            <span class="comment-author">ExplorerPro</span>
+                            <span class="comment-time">• 3 часа назад</span>
+                        </div>
+                        <div class="comment-text">Был рядом месяц назад. Даже не стал подходить близко. Внутри полно странного оборудования, которое до сих пор мигает.</div>
+                        <div class="replies">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="comment-avatar" style="background: linear-gradient(135deg, #ffd89b 0%, #19547b 100%);">C</div>
+                                    <span class="comment-author">CuriousCat</span>
+                                    <span class="comment-time">• 2 часа назад</span>
+                                </div>
+                                <div class="comment-text">И правильно сделал. Не рискуй жизнью!</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comment 16 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ff6b6b 0%, #556270 100%);">C</div>
+                            <span class="comment-author">ConspiracyTheorist</span>
+                            <span class="comment-time">• 6 часов назад</span>
+                        </div>
+                        <div class="comment-text">Это не просто военная база. Там проводили секретные эксперименты. Правительство скрывает правду!</div>
+                    </div>
+
+                    <!-- Comment 17 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #e4e4e4 0%, #e4e4e4 100%); color: #333;">N</div>
+                            <span class="comment-author">NormalGuy</span>
+                            <span class="comment-time">• 1 час назад</span>
+                        </div>
+                        <div class="comment-text">Ребят, это просто старое здание. Но всё равно не советую туда ходить, мало ли что.</div>
+                    </div>
+
+                    <!-- Comment 18 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">P</div>
+                            <span class="comment-author">PhotoMaster</span>
+                            <span class="comment-time">• 4 часа назад</span>
+                        </div>
+                        <div class="comment-text">Классные фото! Но зачем ты рискуешь? Могут и арестовать за проникновение.</div>
+                    </div>
+
+                    <!-- Comment 19 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ffcccc 0%, #ffcccc 100%); color: #333;">S</div>
+                            <span class="comment-author">SafetyFirst</span>
+                            <span class="comment-time">• 2 часа назад</span>
+                        </div>
+                        <div class="comment-text">Будьте осторожны! Такие места могут быть нестабильны конструкционно. Не рискуйте жизнью ради фото.</div>
+                    </div>
+
+                    <!-- Comment 20 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">L</div>
+                            <span class="comment-author">LocalResident</span>
+                            <span class="comment-time">• 7 часов назад</span>
+                        </div>
+                        <div class="comment-text">Я живу недалеко от этого места. Местные говорят что там призраки. Никто не ходит туда после заката.</div>
+                        <div class="replies">
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="comment-avatar" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">S</div>
+                                    <span class="comment-author">ScaredyCat</span>
+                                    <span class="comment-time">• 6 часов назад</span>
+                                </div>
+                                <div class="comment-text">😱 Я бы туда даже днём не пошёл!</div>
+                            </div>
+                            <div class="comment">
+                                <div class="comment-header">
+                                    <div class="comment-avatar" style="background: linear-gradient(135deg, #d4fc79 0%, #d4fc79 100%); color: #333;">R</div>
+                                    <span class="comment-author">RationalThinker</span>
+                                    <span class="comment-time">• 5 часов назад</span>
+                                </div>
+                                <div class="comment-text">Это просто суеверия. Но всё равно опасно - там могут быть ловушки.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Comment 21 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #96e6a1 0%, #96e6a1 100%); color: #333;">H</div>
+                            <span class="comment-author">HistoryBuff</span>
+                            <span class="comment-time">• 8 часов назад</span>
+                        </div>
+                        <div class="comment-text">Интересно с исторической точки зрения. Но изучать лучше издалека.</div>
+                    </div>
+
+                    <!-- Comment 22 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #434343 0%, #000000 100%);">N</div>
+                            <span class="comment-author">NightOwl</span>
+                            <span class="comment-time">• 3 часа назад</span>
+                        </div>
+                        <div class="comment-text">Ночью туда даже смотреть страшно. Кто вообще туда ходит?</div>
+                    </div>
+
+                    <!-- Comment 23 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #fed6e3 0%, #fed6e3 100%); color: #333;">A</div>
+                            <span class="comment-author">ArchiveHunter</span>
+                            <span class="comment-time">• 9 часов назад</span>
+                        </div>
+                        <div class="comment-text">Нашёл документы в архивах - эта база принадлежала ВМФ. Закрыта в 1995 году по неизвестным причинам.</div>
+                    </div>
+
+                    <!-- Comment 24 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #ff9966 0%, #ff5e62 100%);">R</div>
+                            <span class="comment-author">RandomUser</span>
+                            <span class="comment-time">• 1 час назад</span>
+                        </div>
+                        <div class="comment-text">Автор, удали координаты! Это же опасно для других людей!</div>
+                    </div>
+
+                    <!-- Comment 25 -->
+                    <div class="comment">
+                        <div class="comment-header">
+                            <div class="comment-avatar" style="background: linear-gradient(135deg, #a8edea 0%, #a8edea 100%); color: #333;">G</div>
+                            <span class="comment-author">GeocacheFinder</span>
+                            <span class="comment-time">• 4 часа назад</span>
+                        </div>
+                        <div class="comment-text">Отметил эти координаты на карте ТОЛЬКО чтобы избегать этого места. Берегите себя!</div>
+                    </div>
+
+                </section>
+            </main>
+
+            <aside class="sidebar">
+                <div class="sidebar-card">
+                    <div class="sidebar-title">📍 Информация о локации</div>
+                    <div class="info-item">
+                        <strong style="color: #d7dadc">Координаты:</strong><br>
+                        <span style="font-family: monospace; color: #00d4ff;">-7.549495879322532,<br>131.3820657731916</span>
+                    </div>
+                    <div class="info-item">
+                        <strong style="color: #d7dadc">Статус:</strong> Заброшена<br>
+                        <strong style="color: #d7dadc">Тип:</strong> Военная база<br>
+                        <strong style="color: #d7dadc">Опасность:</strong> 🔴 Высокая
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <div class="sidebar-title">📊 Статистика</div>
+                    <div class="info-item">
+                        <strong style="color: #d7dadc">Голосов:</strong> 2.4k<br>
+                        <strong style="color: #d7dadc">Комментариев:</strong> 247<br>
+                        <strong style="color: #d7dadc">Просмотров:</strong> 12.5k
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
