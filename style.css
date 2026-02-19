@@ -10,6 +10,7 @@ body {
     color: #e0e0e0;
     min-height: 100vh;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 /* BLUGGLE Search Page - Dark Theme */
@@ -75,6 +76,7 @@ body {
     display: flex;
     gap: 12px;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .btn {
@@ -86,6 +88,8 @@ body {
     font-size: 14px;
     cursor: pointer;
     transition: all 0.3s;
+    min-height: 44px;
+    min-width: 120px;
 }
 
 .btn:hover {
@@ -102,19 +106,20 @@ body {
 }
 
 .results-header {
-    padding: 20px 30px;
+    padding: 15px 20px;
     border-bottom: 1px solid #3d3d3d;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 15px;
     background-color: #1a1a1a;
     position: sticky;
     top: 0;
     z-index: 100;
+    flex-wrap: wrap;
 }
 
 .results-logo {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     letter-spacing: -2px;
     cursor: pointer;
@@ -122,7 +127,7 @@ body {
 
 .results-search-box {
     flex: 1;
-    max-width: 690px;
+    min-width: 200px;
 }
 
 .results-search-input {
@@ -134,6 +139,7 @@ body {
     outline: none;
     background-color: #2d2d2d;
     color: #e0e0e0;
+    min-height: 44px;
 }
 
 .back-btn {
@@ -146,6 +152,7 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     margin-left: auto;
+    min-height: 44px;
 }
 
 .back-btn:hover {
@@ -154,7 +161,7 @@ body {
 }
 
 .results-container {
-    padding: 30px;
+    padding: 20px;
     max-width: 800px;
     margin: 0 auto;
 }
@@ -188,6 +195,7 @@ body {
     align-items: center;
     gap: 10px;
     color: #9aa0a6;
+    flex-wrap: wrap;
 }
 
 .result-favicon {
@@ -199,6 +207,7 @@ body {
     align-items: center;
     justify-content: center;
     font-size: 16px;
+    flex-shrink: 0;
 }
 
 .result-favicon img {
@@ -214,6 +223,7 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 8px;
+    word-wrap: break-word;
 }
 
 .result-title:hover {
@@ -224,6 +234,7 @@ body {
     color: #9aa0a6;
     font-size: 14px;
     line-height: 1.58;
+    word-wrap: break-word;
 }
 
 /* Bluddit Page - Dark Theme */
@@ -238,7 +249,7 @@ body {
 .header {
     background-color: #1a1a1b;
     box-shadow: 0 2px 4px rgba(0,0,0,0.3);
-    padding: 8px 20px;
+    padding: 8px 15px;
     position: fixed;
     top: 0;
     left: 0;
@@ -248,6 +259,8 @@ body {
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid #343536;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .logo-section {
@@ -266,6 +279,7 @@ body {
     cursor: pointer;
     transition: all 0.3s;
     margin-right: 10px;
+    min-height: 36px;
 }
 
 .back-btn-small:hover {
@@ -278,6 +292,7 @@ body {
     height: 40px;
     border-radius: 50%;
     overflow: hidden;
+    flex-shrink: 0;
 }
 
 .logo-bluddit img {
@@ -294,8 +309,9 @@ body {
 }
 
 .search-bar {
-    flex: 0 1 600px;
-    margin: 0 20px;
+    flex: 1;
+    min-width: 150px;
+    margin: 0 10px;
 }
 
 .search-bar input {
@@ -306,16 +322,18 @@ body {
     background-color: #272729;
     color: #d7dadc;
     font-size: 14px;
+    min-height: 36px;
 }
 
 .user-menu {
     display: flex;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .btn-primary {
-    padding: 6px 20px;
+    padding: 6px 16px;
     border-radius: 20px;
     border: none;
     cursor: pointer;
@@ -323,10 +341,11 @@ body {
     font-size: 14px;
     background-color: #00d4ff;
     color: #030303;
+    min-height: 36px;
 }
 
 .btn-outline {
-    padding: 6px 20px;
+    padding: 6px 16px;
     border-radius: 20px;
     border: 1px solid #00d4ff;
     background: transparent;
@@ -334,15 +353,16 @@ body {
     cursor: pointer;
     font-weight: bold;
     font-size: 14px;
+    min-height: 36px;
 }
 
 .container {
     max-width: 1000px;
-    margin: 80px auto 20px;
+    margin: 70px auto 20px;
     display: grid;
     grid-template-columns: 1fr 300px;
     gap: 20px;
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .post {
@@ -359,6 +379,7 @@ body {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .subreddit-link {
@@ -371,6 +392,7 @@ body {
     font-size: 18px;
     font-weight: 500;
     color: #d7dadc;
+    word-wrap: break-word;
 }
 
 .post-meta {
@@ -418,6 +440,7 @@ body {
     position: relative;
     color: #d7dadc;
     line-height: 1.6;
+    word-wrap: break-word;
 }
 
 .post-description li::before {
@@ -437,7 +460,7 @@ body {
 
 .post-image {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
     cursor: zoom-in;
     border-radius: 4px;
@@ -449,6 +472,7 @@ body {
     font-family: 'Courier New', monospace;
     font-size: 14px;
     border-bottom: 1px solid #343536;
+    word-break: break-all;
 }
 
 .coordinates-value {
@@ -460,6 +484,7 @@ body {
     padding: 8px 16px;
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .action-btn {
@@ -475,6 +500,7 @@ body {
     font-weight: bold;
     color: #818384;
     transition: all 0.3s;
+    min-height: 36px;
 }
 
 .action-btn:hover {
@@ -507,6 +533,7 @@ body {
     gap: 8px;
     margin-bottom: 8px;
     font-size: 12px;
+    flex-wrap: wrap;
 }
 
 .comment-avatar {
@@ -537,6 +564,7 @@ body {
     line-height: 21px;
     padding-left: 32px;
     color: #d7dadc;
+    word-wrap: break-word;
 }
 
 .replies {
@@ -572,20 +600,143 @@ body {
     font-size: 14px;
     margin-bottom: 8px;
     color: #818384;
+    word-wrap: break-word;
 }
 
-/* Responsive */
+/* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
+    .logo {
+        font-size: 60px;
+        letter-spacing: -3px;
+    }
+    
+    .search-input {
+        font-size: 16px;
+        padding: 10px 16px 10px 44px;
+    }
+    
+    .results-header {
+        padding: 12px 15px;
+    }
+    
+    .results-logo {
+        font-size: 20px;
+    }
+    
+    .back-btn {
+        margin-left: 0;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
     .container {
         grid-template-columns: 1fr;
+        margin-top: 60px;
+        padding: 0 10px;
     }
+    
     .sidebar {
         display: none;
     }
-    .logo {
-        font-size: 60px;
-    }
+    
     .post-images {
         grid-template-columns: 1fr;
+    }
+    
+    .post-image {
+        height: 200px;
+    }
+    
+    .post-title {
+        font-size: 16px;
+    }
+    
+    .warning-box h4 {
+        font-size: 16px;
+    }
+    
+    .logo-text {
+        font-size: 20px;
+    }
+    
+    .search-bar {
+        order: 3;
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
+    
+    .header {
+        padding: 8px 10px;
+    }
+    
+    .replies {
+        margin-left: 16px;
+    }
+    
+    .comment-text {
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 48px;
+    }
+    
+    .search-page {
+        padding: 15px;
+    }
+    
+    .search-buttons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .results-container {
+        padding: 15px;
+    }
+    
+    .result-item {
+        padding: 15px;
+    }
+    
+    .result-title {
+        font-size: 18px;
+    }
+    
+    .post-actions {
+        justify-content: center;
+    }
+    
+    .action-btn {
+        flex: 1;
+        min-width: 100px;
+        justify-content: center;
+    }
+    
+    .user-menu {
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .btn-primary, .btn-outline {
+        flex: 1;
+        min-width: 100px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) {
+    .btn, .back-btn, .back-btn-small, .action-btn, .btn-primary, .btn-outline {
+        min-height: 44px;
+    }
+    
+    .search-input, .results-search-input {
+        min-height: 44px;
     }
 }
